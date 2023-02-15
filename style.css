@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DECOR DANS LE CORPS DE LA PAGE */
+
+body {
+    background-image: url("/Images/paysage.jpg");
+}
+
+.score {
+    display: flex;
+    justify-content: flex-end;
+    margin: 150px 400px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(143, 93, 0); 
+}
+
+.play:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+
+.container {
+    position: relative;
+}
+
+
+/* TROU DE TAUPE */
+
+.trou_1 {
+    position: absolute;
+    top: 500px;
+    left: 160px;
+    width: 250px;
+    
+}
+
+.trou_2 {
+    position: absolute;
+    top: 530px;
+    left: 770px;
+    width: 250px;
+}
+
+.trou_3 {
+    position: absolute;
+    top: 500px;
+    right: 30px;
+    width: 250px;
+    overflow: hidden;
+}
+
+
+
+/* TAUPE */
+
+img {
+    width: 150px;
+}
+
+.n1 {
+    position: absolute;
+    top: 410px;
+    left: 215px;
+    cursor: pointer;
+}
+
+.n2 {
+    position: absolute;
+    top: 440px;
+    left: 830px;
+    cursor: pointer;
+}
+
+.n3 {
+    position: absolute;
+    top: 410px;
+    right: 80px;
+    cursor: pointer;
+}
+
