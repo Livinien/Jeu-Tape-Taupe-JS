@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* DECOR DANS LE CORPS DE LA PAGE */
 
 body {
@@ -11,8 +13,7 @@ body {
 }
 
 .score {
-    
-    margin: 50px 470px;
+    margin: 50px 450px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 40px;
@@ -33,26 +34,48 @@ body {
 
 .trou_1 {
     position: absolute;
-    top: 500px;
-    left: 160px;
+    top: 430px;
+    left: 250px;
     width: 250px;
-    
 }
 
 .trou_2 {
     position: absolute;
-    top: 530px;
-    left: 770px;
+    top: 470px;
+    left: 800px;
     width: 250px;
 }
 
 .trou_3 {
     position: absolute;
-    top: 500px;
-    right: 30px;
+    top: 450px;
+    right: 110px;
     width: 250px;
     overflow: hidden;
 }
+
+
+.trou_4 {
+    position: absolute;
+    top: 450px;
+    width: 250px;
+}
+
+.trou_5 {
+    position: absolute;
+    top: 480px;
+    left: 500px;
+    width: 250px;
+}
+
+.trou_6 {
+    position: absolute;
+    top: 400px;
+    right: 30px;
+    width: 150px;
+    overflow: hidden;
+}
+
 
 
 
@@ -65,21 +88,71 @@ img {
 
 .n1 {
     position: absolute;
-    top: 410px;
-    left: 215px;
+    top: 340px;
+    left: 305px;
     cursor: pointer;
 }
 
 .n2 {
     position: absolute;
-    top: 440px;
-    left: 830px;
+    top: 380px;
+    left: 850px;
     cursor: pointer;
 }
 
 .n3 {
     position: absolute;
-    top: 410px;
-    right: 80px;
+    top: 360px;
+    right: 160px;
     cursor: pointer;
 }
+
+.n4 {
+    position: absolute;
+    top: 360px;
+    left: 50px;
+    cursor: pointer;
+}
+
+.n5 {
+    position: absolute;
+    top: 390px;
+    left: 550px;
+    cursor: pointer;
+}
+
+.n6 {
+    position: absolute;
+    top: 335px;
+    right: 55px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.n7 {
+    position: absolute;
+    top: 206px;
+    left: 110px;
+    cursor: pointer;
+}
+
+.n8 {
+    /* Sam */
+    position: absolute;
+    top: 270px;
+    left: 330px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.n9 {
+    /* Gertrude */
+    position: absolute;
+    top: 325px;
+    left: 500px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+
