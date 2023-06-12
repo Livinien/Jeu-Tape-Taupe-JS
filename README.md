@@ -13,20 +13,21 @@ Choses à faire sur le projet :
 
 1. Enlever la scrollbar. ✅
 2. Créer 9 trous pour les taupes. ✅
-3. Modifier le nombre de point en le réduisant de 2 à 1.
+3. Modifier le nombre de point en le réduisant de 2 à 1. ✅
+4. Renommer les taupes dans le CSS.
 
 
 
 Bonus : 
 
-4. Créer une partie avec une durée limitée (ex : 30 secondes), en demandant le nom du joueur. La partie se lance au click sur le bouton "start".
+5. Créer une partie avec une durée limitée (ex : 30 secondes), en demandant le nom du joueur. La partie se lance au click sur le bouton "start". Création d'une modale.
 
-5. Créer un leader board (nom du joueur et nombre de points), classé du plus fort au plus faible, et l'afficher sur la page d'accueil du jeu.
+6. Créer un leader board (nom du joueur et nombre de points), classé du plus fort au plus faible, et l'afficher sur la page d'accueil du jeu.
 
-6. Créer 3 niveaux de difficulté !
+7. Créer 3 niveaux de difficulté !
 
 
 
 Et pour finir :
 
-7. L'héberger sur GitHub.
+8. L'héberger sur GitHub.

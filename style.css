@@ -32,6 +32,7 @@ body {
 
 /* TROU DE TAUPE */
 
+/* Trou de Rico */
 .trou_1 {
     position: absolute;
     top: 430px;
@@ -39,6 +40,7 @@ body {
     width: 250px;
 }
 
+/* Trou de Skipper */
 .trou_2 {
     position: absolute;
     top: 470px;
@@ -46,6 +48,7 @@ body {
     width: 250px;
 }
 
+/* Trou de Soldat */
 .trou_3 {
     position: absolute;
     top: 450px;
@@ -54,13 +57,14 @@ body {
     overflow: hidden;
 }
 
-
+/* Trou de Ginger */
 .trou_4 {
     position: absolute;
     top: 450px;
     width: 250px;
 }
 
+/* Trou de Rocky */
 .trou_5 {
     position: absolute;
     top: 480px;
@@ -68,6 +72,7 @@ body {
     width: 250px;
 }
 
+/* Trou de Phoenix */
 .trou_6 {
     position: absolute;
     top: 400px;
@@ -86,6 +91,7 @@ img {
     width: 150px;
 }
 
+/* Taupe Rico */
 .n1 {
     position: absolute;
     top: 340px;
@@ -93,6 +99,7 @@ img {
     cursor: pointer;
 }
 
+/* Taupe Skipper */
 .n2 {
     position: absolute;
     top: 380px;
@@ -100,6 +107,7 @@ img {
     cursor: pointer;
 }
 
+/* Taupe Soldat */
 .n3 {
     position: absolute;
     top: 360px;
@@ -107,6 +115,7 @@ img {
     cursor: pointer;
 }
 
+/* Taupe Ginger */
 .n4 {
     position: absolute;
     top: 360px;
@@ -114,6 +123,7 @@ img {
     cursor: pointer;
 }
 
+/* Taupe Rocky */
 .n5 {
     position: absolute;
     top: 390px;
@@ -121,6 +131,7 @@ img {
     cursor: pointer;
 }
 
+/* Taupe Phoenix */
 .n6 {
     position: absolute;
     top: 335px;
@@ -129,6 +140,7 @@ img {
     cursor: pointer;
 }
 
+/* Taupe Rex */
 .n7 {
     position: absolute;
     top: 206px;
@@ -136,6 +148,7 @@ img {
     cursor: pointer;
 }
 
+/* Taupe Sam */
 .n8 {
     /* Sam */
     position: absolute;
@@ -145,8 +158,8 @@ img {
     cursor: pointer;
 }
 
+/* Taupe Gertrude */
 .n9 {
-    /* Gertrude */
     position: absolute;
     top: 325px;
     left: 500px;
