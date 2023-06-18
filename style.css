@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -18,12 +19,44 @@ body {
     font-weight: bold;
     font-size: 40px;
     color: #fff; 
+    display: none;
 }
 
-.play:hover {
-    background: rgba(255,255,255,0.4);
+
+/* COMPTE À REBOURS */
+
+.score-temps {
+    display: flex;
 }
 
+.clock {
+    position: fixed;
+	width: 110px;
+	height: 110px;
+    right: 230px;
+	border-radius: 50%;
+	background-color: rgb(182, 134, 0);
+	margin-top: 20px;
+    -webkit-box-shadow: -1px 0px 26px 3px #000000; 
+    box-shadow: -1px 0px 26px 3px #000000;
+    display: none;
+}
+
+.secondes-jeu {
+	display: block;
+	width: 100%;
+    font-weight: bold;
+    color: #fff;
+	padding-top: 30px;
+	text-align: center;
+	font-size: 60px;
+    display: none;
+}
+
+
+
+
+/* CONTAINER DES TROUS ET DES TAUPES */
 
 .container {
     position: relative;
@@ -31,6 +64,10 @@ body {
 
 
 /* TROU DE TAUPE */
+
+.trou_de_taupe {
+    display: none;
+}
 
 /* Trou de Rico */
 .trou_1 {
@@ -83,9 +120,11 @@ body {
 
 
 
-
-
 /* TAUPE */
+
+.taupe {
+    display: none;
+}
 
 img {
     width: 150px;
@@ -169,3 +208,330 @@ img {
 
 
 
+
+/* MODALE EXPLCATIVE DU JEU DE TAPE TAUPE */
+
+.modale-guide {
+    width: 400px;
+    background-color: rgb(147, 98, 0);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #fff;
+    z-index: 100;
+    -webkit-box-shadow: -1px 0px 26px 3px #000000; 
+    box-shadow: -1px 0px 26px 3px #000000;
+    
+}
+
+.modale-guide img {
+    width: 200px;
+    margin-top: -50px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+}
+
+.modale-guide h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 30px 0 40px;
+}
+
+.modale-guide .temps-de-jeu {
+    margin: 30px 0 40px;
+}
+
+.modale-guide .coups {
+    margin: 30px 0 40px;
+}
+
+.bouton-suivant {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: rgb(242, 161, 0);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+    cursor: pointer;
+}
+
+.bouton-suivant:hover {
+    background-color: rgb(255, 183, 40);
+}
+
+
+
+
+
+/* MOODALE POUR CHOISIR LE NIVEAU DE DIFFICULTE */
+
+.modale-level {
+    width: 400px;
+    background-color: rgb(147, 98, 0);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #fff;
+    z-index: 100;
+    -webkit-box-shadow: -1px 0px 26px 3px #000000; 
+    box-shadow: -1px 0px 26px 3px #000000;
+    display: none;
+}
+
+.modale-level h3 {
+    font-weight: bold;
+    margin: 30px 0 20px;
+}
+
+.modale-level img {
+    width: 200px;
+    margin-top: -50px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+}
+
+.modale-level .bouton-facile {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: rgb(43, 152, 0);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+    cursor: pointer;
+}
+
+.bouton-facile:hover {
+    background-color: rgb(54, 189, 0);
+}
+
+.modale-level .bouton-moyen {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: rgb(181, 188, 0);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+    cursor: pointer;
+}
+
+.bouton-moyen:hover {
+    background-color: rgb(204, 211, 0);
+}
+
+.modale-level .bouton-difficile {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: rgb(185, 0, 0);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+    cursor: pointer;
+}
+
+.bouton-difficile:hover {
+    background-color: rgb(214, 0, 0);
+}
+
+
+.bouton-precedent {
+    width: 100%;
+    margin-top: 60px;
+    padding: 10px 0;
+    background-color: rgb(242, 161, 0);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+    cursor: pointer;
+}
+
+.bouton-precedent:hover {
+    background-color: rgb(255, 183, 40);
+}
+
+
+
+
+/* MOODALE POUR LE LANCEMENT DU JEU */
+
+.modale-begin {
+    width: 400px;
+    background-color: rgb(147, 98, 0);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #fff;
+    z-index: 100;
+    -webkit-box-shadow: -1px 0px 26px 3px #000000; 
+    box-shadow: -1px 0px 26px 3px #000000;
+    display: none;
+}
+
+.modale-begin img {
+    width: 200px;
+    margin-top: -55px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+}
+
+.modale-begin h3 {
+    font-weight: bold;
+    margin: 30px 0 20px;
+}
+
+input {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    background: #fff;
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    margin: 20px 0 20px;
+}
+
+
+.bouton-start {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: rgb(63, 146, 0);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+    cursor: pointer;
+}
+
+.bouton-start:hover {
+    background-color: rgb(73, 169, 0);
+}
+
+
+
+
+/* MODALE POUR MARQUER LA FIN DE LA PARTIE */
+
+.modale-fin {
+    width: 400px;
+    background-color: rgb(147, 98, 0);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #fff;
+    z-index: 100;
+    -webkit-box-shadow: -1px 0px 26px 3px #000000; 
+    box-shadow: -1px 0px 26px 3px #000000;
+    display: none;
+}
+
+.modale-fin img {
+    width: 200px;
+    margin-top: -55px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+}
+
+.modale-fin h3 {
+    font-weight: bold;
+    margin: 30px 0 20px;
+}
+
+.bouton-recommencer {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: rgb(63, 146, 0);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+    cursor: pointer;
+}
+
+.bouton-recommencer:hover {
+    background-color: rgb(73, 169, 0);
+}
+
+.bouton-quitter {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: rgb(242, 161, 0);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px -1px 10px -3px #000000; 
+    box-shadow: 0px -1px 10px -3px #000000;
+    cursor: pointer;
+}
+
+.bouton-quitter:hover {
+    background-color: rgb(255, 183, 40);
+}

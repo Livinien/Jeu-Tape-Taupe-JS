@@ -10,12 +10,75 @@
 
 </head>
 <body>
+
     
-    <h1 class="score">Score : <span class="like">0</span></h1>
+    <!-- SCORE ET COMPTE À REBOURS -->
+   
+    <div class="score-temps">
+        <h1 class="score" id="score-plus">Score : <span class="like">0</span></h1>
+    
+        <div class="clock">
+            <span class="secondes-jeu" id="seconds">30</span>
+        </div>
+        
+    </div>
+
+
+    <!-- MODALE EXPLCATIVE DU JEU DE TAPE TAUPE -->
+
+    <div class="modale-guide" id="modale-instructions">
+        <img src="/Images/Taupe_Gun.png" alt="Image du jeu de Tape Taupe">
+        <h2>Jeu du Tape Taupe</h2>
+        <p class="temps-de-jeu">Cliquez sur un maximum de taupe avec votre souris dans un minimum de temps pour gagner le plus de points possible</p>
+        <p class="coups"><strong>TOUS LES COUPS SONT PERMIS !!!</strong></p>
+        <p>Les parties auront une durée de <strong>30 secondes</strong>.</p>
+        <button class="bouton-suivant" id="suivant">SUIVANT</button>
+    </div>
+
+
+    <!-- MODALE DU NIVEAU DE DIFFCULTE -->
+
+    <div class="modale-level" id="modale-niveaux-trois">
+        <img src="/Images/Taupe_Gun.png" alt="Image du jeu de Tape Taupe">
+        
+        <h3>Choisissez votre niveau de difficulté :</h3>
+
+        <button class="bouton-facile" id="facile">FACILE</button>
+        <button class="bouton-moyen" id="moyen">MOYEN</button>
+        <button class="bouton-difficile" id="difficile">DIFFICILE</button>
+
+        <button class="bouton-precedent" id="precedent-modale-1">PRÉCEDENT</button>
+    </div>
+
+
+    <!-- MODALE DU LANCEMENT DU JEU -->
+
+    <div class="modale-begin" id="modale-start">
+        <img src="/Images/Taupe_Gun.png" alt="Image du jeu de Tape Taupe">
+        <h3>LET'S GO !!!</h3>
+        <input type="text" placeholder="Nom du joueur">
+        <input type="submit" value="START !!!" class="bouton-start" id="start-jeu">
+
+        <button class="bouton-precedent" id="precedent-modale-2">PRÉCEDENT</button>
+    </div>
+
+
+    <!-- MODALE POUR MARQUER LA FIN DE LA PARTIE -->
+
+    <div class="modale-fin" id="modale-fin-de-jeu">
+        <img src="/Images/Taupe_Gun.png" alt="Image du jeu de Tape Taupe">
+        <h3>VOUS AVEZ FINI VOTRE PARTIE !!!</h3>
+        <button type="submit" class="bouton-recommencer" id="recommencer">RCOMMENCER !!!</button>
+        <button class="bouton-quitter" id="quitter">QUITTER</button>
+    </div>
+
+
+
+    <!-- CONTAINER INCLUANT LES TROUS ET LES TAUPES -->
 
     <div class="container">
 
-        <div class="trou_de_taupe">
+        <div class="trou_de_taupe" id="groupe-trou-taupe">
             <img src="/Images/trou_de_taupe.png" class="trou_1" alt="trou de taupe">
             <img src="/Images/trou_de_taupe.png" class="trou_2" alt="trou de taupe">
             <img src="/Images/trou_de_taupe.png" class="trou_3" alt="trou de taupe">
@@ -24,7 +87,7 @@
             <img src="/Images/trou_de_taupe.png" class="trou_6" alt="trou de taupe">
         </div>
 
-        <div class="taupe">
+        <div class="taupe" id="groupe-taupe">
             <img src="/Images/taupe.png" id="rico" class="taupe n1" alt="Taupe 1 - Rico">
             <img src="/Images/taupe.png" id="skipper" class="taupe n2" alt="Taupe 2 - Skipper">
             <img src="/Images/taupe.png" id="soldat" class="taupe n3" alt="Taupe 3 - Soldat">
