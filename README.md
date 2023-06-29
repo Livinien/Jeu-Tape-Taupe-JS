@@ -29,16 +29,16 @@ Bonus :
 
 6. Créer un leader board (nom du joueur et nombre de points), classé du plus fort au plus faible, et l'afficher sur la page d'accueil du jeu.
 
-- 6.0 : Afficher la modale à la fin du compte à rebours.
-- 6.1 : Rentrer le nom du joueur.
-- 6.2 : Faire apparaitre une modale à la fin du compte à rebours avec le nom du joueur.
-- 6.3 : Afficher automatiquement la modale des résultats + le nom du joueur à la fin des 30 seconde écoulés.
+- 6.0 : Afficher la modale à la fin du compte à rebours. ✅
+- 6.1 : Rentrer le nom du joueur. ✅
+- 6.2 : Afficher le score sur la modale de fin à la fin des 30 seconde écoulés.
+- 6.3 : Afficher le nom du joueur à la fin des 30 seconde écoulés. ✅
 
 
 
 7. Créer 3 niveaux de difficulté !
 
-- 7.0 : Choisir la difficulté au moment du clique sur sur le bouton et le stocker dans le LocalStorage.
+- 7.0 : Choisir la difficulté au moment du clique sur le bouton et le stocker dans le LocalStorage.
 
 
 

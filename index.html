@@ -15,16 +15,15 @@
     <!-- SCORE ET COMPTE À REBOURS -->
    
     <div class="score-temps">
-        <h1 class="score" id="score-plus">Score : <span class="like">0</span></h1>
+        <h1 class="score" id="score-plus">Score : <span class="points">0</span></h1>
     
         <div class="clock">
-            <span class="secondes-jeu" id="seconds">30</span>
+            <span class="secondes-jeu" id="seconds"></span>
         </div>
-        
     </div>
 
 
-    <!-- MODALE EXPLCATIVE DU JEU DE TAPE TAUPE -->
+    <!-- MODALE 1 EXPLICATIVE DU JEU DE TAPE TAUPE -->
 
     <div class="modale-guide" id="modale-instructions">
         <img src="/Images/Taupe_Gun.png" alt="Image du jeu de Tape Taupe">
@@ -36,7 +35,7 @@
     </div>
 
 
-    <!-- MODALE DU NIVEAU DE DIFFCULTE -->
+    <!-- MODALE 2 DU NIVEAU DE DIFFCULTE -->
 
     <div class="modale-level" id="modale-niveaux-trois">
         <img src="/Images/Taupe_Gun.png" alt="Image du jeu de Tape Taupe">
@@ -51,27 +50,31 @@
     </div>
 
 
-    <!-- MODALE DU LANCEMENT DU JEU -->
+    <!-- MODALE 3 DU LANCEMENT DU JEU -->
 
     <div class="modale-begin" id="modale-start">
         <img src="/Images/Taupe_Gun.png" alt="Image du jeu de Tape Taupe">
-        <h3>LET'S GO !!!</h3>
-        <input type="text" placeholder="Nom du joueur">
-        <input type="submit" value="START !!!" class="bouton-start" id="start-jeu">
+        <h3>C'EST PARTI !!!</h3>
+        <input type="text" id="pseudo_joueur" placeholder="Nom du joueur">
+        <button class="bouton-start" id="start-jeu" onclick="save_pseudo()">START !!!</button>
 
         <button class="bouton-precedent" id="precedent-modale-2">PRÉCEDENT</button>
     </div>
+    
 
-
-    <!-- MODALE POUR MARQUER LA FIN DE LA PARTIE -->
-
+    <!-- MODALE 4 POUR MARQUER LA FIN DE LA PARTIE -->
+    
     <div class="modale-fin" id="modale-fin-de-jeu">
         <img src="/Images/Taupe_Gun.png" alt="Image du jeu de Tape Taupe">
         <h3>VOUS AVEZ FINI VOTRE PARTIE !!!</h3>
-        <button type="submit" class="bouton-recommencer" id="recommencer">RCOMMENCER !!!</button>
+        <span class="score-joueur">Score de
+            <h2 class="afficher-joueur" id="afficher_pseudo_joueur"></h2>
+        </span>
+        <h4 id="score_final"></h4>
+        <button type="submit" class="bouton-recommencer" id="recommencer">RECOMMENCER !!!</button>
         <button class="bouton-quitter" id="quitter">QUITTER</button>
     </div>
-
+    
 
 
     <!-- CONTAINER INCLUANT LES TROUS ET LES TAUPES -->
@@ -88,7 +91,7 @@
         </div>
 
         <div class="taupe" id="groupe-taupe">
-            <img src="/Images/taupe.png" id="rico" class="taupe n1" alt="Taupe 1 - Rico">
+            <img src="/Images/taupe.png" id="rico" class="taupe n1" alt="Taupe 1 - Rico" >
             <img src="/Images/taupe.png" id="skipper" class="taupe n2" alt="Taupe 2 - Skipper">
             <img src="/Images/taupe.png" id="soldat" class="taupe n3" alt="Taupe 3 - Soldat">
             <img src="/Images/taupe.png" id="ginger" class="taupe n4" alt="Taupe 4 - Ginger">
@@ -101,7 +104,10 @@
     </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
     <script src="app.js"></script>
 </body>
 </html>

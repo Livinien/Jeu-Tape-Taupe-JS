@@ -209,7 +209,7 @@ img {
 
 
 
-/* MODALE EXPLCATIVE DU JEU DE TAPE TAUPE */
+/* MODALE 1 EXPLICATIVE DU JEU DE TAPE TAUPE */
 
 .modale-guide {
     width: 400px;
@@ -274,7 +274,7 @@ img {
 
 
 
-/* MOODALE POUR CHOISIR LE NIVEAU DE DIFFICULTE */
+/* MODALE 2 POUR CHOISIR LE NIVEAU DE DIFFICULTE */
 
 .modale-level {
     width: 400px;
@@ -390,7 +390,7 @@ img {
 
 
 
-/* MOODALE POUR LE LANCEMENT DU JEU */
+/* MODALE 3 POUR LE LANCEMENT DU JEU */
 
 .modale-begin {
     width: 400px;
@@ -464,7 +464,7 @@ input[type="text"] {
 
 
 
-/* MODALE POUR MARQUER LA FIN DE LA PARTIE */
+/* MODALE 4 POUR MARQUER LA FIN DE LA PARTIE */
 
 .modale-fin {
     width: 400px;
@@ -493,7 +493,17 @@ input[type="text"] {
 
 .modale-fin h3 {
     font-weight: bold;
-    margin: 30px 0 20px;
+    margin: 30px 0 40px;
+}
+
+.modale-fin h2 {
+    margin-top: 10px;
+}
+
+.modale-fin .score-joueur {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 20px;
 }
 
 .bouton-recommencer {
