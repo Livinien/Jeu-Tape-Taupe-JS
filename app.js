@@ -11,13 +11,16 @@ $("#suivant").click(function(){
 
 
 // 2ÈME MODALE
-// CLIQUER SUR LES BOUTONS "FACILE", "MOYEN", "DIFFICILE" POUR PASSER À LA DERNIÈRE MODALE
+// CLIQUER SUR LES BOUTONS "FACILE", "MOYEN", "DIFFICILE" POUR CHOISIR SON NIVEAU DE DIFFICULTÉ ET PASSER À LA TROISIÈME MODALE
 
 let intervalStart
 let temps
 let delay
 let niveaux
 let niveau_temps
+
+
+ // FAIRE APPARAITRE ET CACHER LES TAUPES DE MANIÈRE ALÉATOIRE 
 
   function interval(temps, delay) {
 
@@ -40,7 +43,7 @@ $("#facile").click(function(){
 
   // COMPTE À REBOURS 
 
-  delay = 6000
+  delay = 3000
   temps = 3000
   niveaux = "facile"
   niveau_temps = 60
@@ -88,7 +91,7 @@ $("#difficile").click(function(){
 
 
 
-// CLIQUER SUR LE BOUTON "PRECEDENT" POUR REVENIR À LA PREMIÈRE MODALE
+// CLIQUER SUR LE BOUTON "PRÉCÉDENT" POUR REVENIR À LA PREMIÈRE MODALE
 
 $("#precedent-modale-1").click(function(){
   $("#modale-instructions").css("display", "block");
@@ -102,10 +105,9 @@ $("#precedent-modale-1").click(function(){
 
 // PAGE DU JEU
 
-// LANCER LE JEU AU CLIQUE SUR LE BOUTON "START" SUR LA DERNIÈRE MODALE ET FAIRE APPARAITRE TOUS LES AUTES ÉLÉMENTS INDISPENSABLES POUR LE JEU (SCORE, COMPTE À REBOURS, TROUS, TAUPES)
+// LANCER LE JEU AU CLIQUE SUR LE BOUTON "START" SUR LA TROISIÈME MODALE ET FAIRE APPARAITRE TOUS LES AUTES ÉLÉMENTS INDISPENSABLES POUR LE JEU (SCORE, COMPTE À REBOURS, TROUS, TAUPES)
 
 $("#start-jeu").click(function(){
-
 
   $("#modale-start").css("display", "none");
   $("#score-plus").css("display", "block");
@@ -132,30 +134,24 @@ $("#start-jeu").click(function(){
       $("#score-plus").css("display", "none");
       $(".clock").css("display", "none");
       $("#seconds").css("display", "none");
-      
+
+
+      // RÉCUPÉRER LE PSEUDO DU JOUEUR DEPUIS L'INPUT ET L'AFFICHER DEPUIS LE LOCALSTORAGE SUR LA MODALE DE FIN (MODALE 4)
+      document.getElementById('afficher_pseudo_joueur').innerHTML = JSON.parse(localStorage.getItem('data'));
+  
+      // RÉCUPÉRER LE SCORE DU JOUEUR ET L'AFFICHER DEPUIS LE LOCALSTORAGE SUR LA MODALE DE FIN (MODALE 4)
+      document.getElementById('score_final').innerHTML = JSON.parse(localStorage.getItem('points'));
+
+      // NETTOYER ENTRE CHAQUE INTERVALLES POUR ÉVITER LA MULTIPLICATION DE TAUPE À CHAQUE COMMENCEMENT DE NOUVELLE PARTIE
       clearInterval(intervalStart)
     }
   };
   setTimeout(countdown, 1000);
 
-  
-
-  // RÉCUPÉRER LE PSEUDO DU JOUEUR DEPUIS L'INPUT ET L'AFFICHER DEPUIS LE LOCALSTORAGE
-
-  if(localStorage.getItem('data') != null) {
-    document.getElementById('afficher_pseudo_joueur').innerHTML = JSON.parse(localStorage.getItem('data'));
-  }
-
-
-  if(localStorage.getItem('points') != null) {
-    document.getElementById('score_final').innerHTML = JSON.parse(localStorage.getItem('points'));
-  }
-
 });
 
 
-
-// CLIQUER SUR LE BOUTON "PRECEDENT" POUR REVENIR À LA DEUXIÈME MODALE
+// CLIQUER SUR LE BOUTON "PRÉCÉDENT" POUR REVENIR À LA DEUXIÈME MODALE
 
 $("#precedent-modale-2").click(function(){
   $("#modale-niveaux-trois").css("display", "block");
@@ -165,18 +161,17 @@ $("#precedent-modale-2").click(function(){
 
 
 
-// ENREGISTRER LE PSEUDO DU JOUEUR DANS LE LOCALSTORAGE
+// ENREGISTRER LE PSEUDO DU JOUEUR DEPUIS LE LOCALSTORAGE
 
 function save_pseudo() {
 
-  // RÉCUPÉRER LE PSEUDO DEPUIS L'INPUT
+  // AFFICHER LE PSEUDO DEPUIS L'INPUT
   let new_pseudo = $('#pseudo_joueur')[0].value;
   
   if(localStorage.getItem('data') == null) {
     localStorage.setItem('data', '[]');
   }
 
-  
   let old_pseudo = JSON.parse(localStorage.getItem('data'));
   old_pseudo.push(new_pseudo);
 
@@ -185,10 +180,13 @@ function save_pseudo() {
 
 
 
+// ENREGISTRER LE SCORE DU JOUEUR DEPUIS LE LOCALSTORAGE
+
 function score_joueur() {
 
-  // RÉCUPÉRER LE PSEUDO DEPUIS L'INPUT
+  // AFFICHER LE NOMBRE DE POINTS DEPUIS LA BALISE H1
   let score = $('#score-plus')[0].value;
+
   
   if(localStorage.getItem('points') == null) {
     localStorage.setItem('points', '[]');
@@ -206,11 +204,7 @@ function score_joueur() {
 
 // 4ÈME MODALE
 
-// MONTRER LE SCORE DU JOUEUR EN FIN DE PARTIE SUR LA MODALE
-
-
-
-// RECOMMENCER UNE NOUVELLE PARTIE EN APPUYANT SUR LE BOUTON "RECOMMENCER"
+// RECOMMENCER UNE NOUVELLE PARTIE EN CLIQUANT SUR LE BOUTON "RECOMMENCER"
 
 $("#recommencer").click(function(){
 
@@ -241,7 +235,17 @@ $("#recommencer").click(function(){
       $("#score-plus").css("display", "none");
       $(".clock").css("display", "none");
       $("#seconds").css("display", "none");
-      
+
+
+      // RÉCUPÉRER LE PSEUDO DU JOUEUR DEPUIS L'INPUT ET L'AFFICHER DEPUIS LE LOCALSTORAGE SUR LA MODALE DE FIN (MODALE 4)
+      document.getElementById('afficher_pseudo_joueur').innerHTML = JSON.parse(localStorage.getItem('data'));
+
+      // RÉCUPÉRER LE SCORE DU JOUEUR ET L'AFFICHER DEPUIS LE LOCALSTORAGE SUR LA MODALE DE FIN (MODALE 4)
+      document.getElementById('score_final').innerHTML = JSON.parse(localStorage.getItem('points'));
+
+
+      // NETTOYER ENTRE CHAQUE INTERVALLES POUR ÉVITER LA MULTIPLICATION DE TAUPE À CHAQUE COMMENCEMENT DE NOUVELLE PARTIE
+      clearInterval(intervalStart)
     }
   };
   setTimeout(countdown, 1000);
@@ -250,11 +254,8 @@ $("#recommencer").click(function(){
   // SUPPRIMER LE PSEUDO ET LE NOMBRE DE POINTS DANS LE LOCALSTORAGE POUR REDÉMARRER UNE NOUVELLE PARTIE
   localStorage.clear();
 
-  // NETTOYER ENTRE CHAQUE INTERVALLES POUR ÉVITER LA MULTIPLICATION DE TAUPE À CHAQUE COMMENCEMENT DE NOUVELLE PARTIE
-  clearInterval(intervalStart)
 
-
-  // REMETTRE LE SCORE À 0 LORSQU'ON APPUYE SUR LE BOUTON "RECOMMENCER"
+  // REMETTRE LE SCORE À 0 LORSQU'ON CLIQUE SUR LE BOUTON "RECOMMENCER"
   $('.points').html(function(i, val)
     { 
       return val*0+0
@@ -264,7 +265,7 @@ $("#recommencer").click(function(){
 
 
 
-// QUITTER LA PARTIE ET REVENIR AU MENU PRINCIPAL EN APPUYANT SUR LE BOUTON "QUITTER"
+// QUITTER LA PARTIE ET REVENIR AU MENU PRINCIPAL EN CLIQUANT SUR LE BOUTON "QUITTER"
 
 $("#quitter").click(function(){
 
@@ -283,7 +284,7 @@ $("#quitter").click(function(){
 
 
 
-  // REMETTRE LE SCORE À 0 LORSQU'ON APPUYE SUR LE BOUTON "QUITTER"
+  // REMETTRE LE SCORE À 0 LORSQU'ON CLIQUE SUR LE BOUTON "QUITTER"
   $('.points').html(function(i, val) 
     { 
       return val*0+0
@@ -292,17 +293,10 @@ $("#quitter").click(function(){
 
 
 
-
+// AJOUTER LE NOMBRE DE POINT AU MOMENT DU CLIQUE SUR LA TAUPE (+1)
 
 $(document).ready(function() {
-
-  // FAIRE APPARAITRE ET CACHER LES TAUPES DE MANIÈRE ALÉATOIRE 
-
-
-
- 
-  // AJOUTER LE NOMBRE DE POINT AU MOMENT DU CLIQUE SUR LA TAUPE
-
+  
   // +1 pour Rico
   $('#rico').click(function() {
     $('.points').html(function(i, val) 
@@ -382,7 +376,6 @@ $(document).ready(function() {
       return val*1+1
     });
   });
-  
 });
 
 
@@ -390,9 +383,11 @@ $(document).ready(function() {
 
 
 $(document).ready(function(){
-  // Initialize Local/Session Storage
+
+  // INITIALISE LE LOCAL/SESSION STORAGE
   ccInit();
-  // Local Storage Counter
+
+  // ADDITION DU NOMBRE DE POINTS DANS LE LOCALSTORAGE À CHAQUE CLIQUE SUR LES TAUPES
  $("#groupe-taupe").click(function(){
     scorePlus("local"); 
  }); 
@@ -414,7 +409,7 @@ function ccInit(){
 }
 
 
-// CLICK COUNTER
+// ADDITION AU CLIQUE DE LA SOURIS QUI S'AJOUTE EN TEMPS RÉEL DANS LE LOCALSTORAGE
 function scorePlus(storageType){
   
   if(typeof(Storage) !== "undefined"){

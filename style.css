@@ -7,11 +7,13 @@
 
 
 
-/* DECOR DANS LE CORPS DE LA PAGE */
+/* DECORS DU JEU TAPE TAUPE */
 
 body {
     background-image: url("/Images/paysage.jpg");
 }
+
+/* SCORE */
 
 .score {
     margin: 50px 450px;
@@ -209,14 +211,14 @@ img {
 
 
 
-/* MODALE 1 EXPLICATIVE DU JEU DE TAPE TAUPE */
+/* MODALE 1 - EXPLICATIONS DU JEU DE TAPE TAUPE */
 
 .modale-guide {
     width: 400px;
     background-color: rgb(147, 98, 0);
     border-radius: 6px;
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -239,15 +241,15 @@ img {
 .modale-guide h2 {
     font-size: 38px;
     font-weight: bold;
-    margin: 30px 0 40px;
+    margin: 20px 0 10px;
 }
 
 .modale-guide .temps-de-jeu {
-    margin: 30px 0 40px;
+    margin: 30px 0 30px;
 }
 
 .modale-guide .coups {
-    margin: 30px 0 40px;
+    margin: 30px 0 30px;
 }
 
 .bouton-suivant {
@@ -274,7 +276,7 @@ img {
 
 
 
-/* MODALE 2 POUR CHOISIR LE NIVEAU DE DIFFICULTE */
+/* MODALE 2 - NIVEAU DE DIFFICULTE */
 
 .modale-level {
     width: 400px;
@@ -366,7 +368,6 @@ img {
     background-color: rgb(214, 0, 0);
 }
 
-
 .bouton-precedent {
     width: 100%;
     margin-top: 60px;
@@ -390,7 +391,7 @@ img {
 
 
 
-/* MODALE 3 POUR LE LANCEMENT DU JEU */
+/* MODALE 3 - LE LANCEMENT DU JEU */
 
 .modale-begin {
     width: 400px;
@@ -464,7 +465,7 @@ input[type="text"] {
 
 
 
-/* MODALE 4 POUR MARQUER LA FIN DE LA PARTIE */
+/* MODALE 4 - LA FIN DE LA PARTIE */
 
 .modale-fin {
     width: 400px;
@@ -476,6 +477,7 @@ input[type="text"] {
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 0 30px 30px;
+    margin-top: 25px;
     color: #fff;
     z-index: 100;
     -webkit-box-shadow: -1px 0px 26px 3px #000000; 
@@ -503,7 +505,17 @@ input[type="text"] {
 .modale-fin .score-joueur {
     font-size: 25px;
     font-weight: bold;
-    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.modale-fin .afficher-joueur {
+    margin-top: 20px;
+}
+
+
+.modale-fin .score-de-fin {
+    font-size: 80px;
+    margin-top: 30px;
 }
 
 .bouton-recommencer {
