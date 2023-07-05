@@ -46,7 +46,7 @@ $("#facile").click(function(){
   delay = 3000
   temps = 3000
   niveaux = "facile"
-  niveau_temps = 60
+  niveau_temps = 61
   interval(temps, delay)
 
 });
@@ -65,7 +65,7 @@ $("#moyen").click(function(){
   delay = 1000
   temps = 1000
   niveaux = "moyen"
-  niveau_temps = 30
+  niveau_temps = 31
   interval(temps, delay)
 
 });
@@ -84,7 +84,7 @@ $("#difficile").click(function(){
   delay = 500
   temps = 500
   niveaux = "difficile"
-  niveau_temps = 15
+  niveau_temps = 16
   interval(temps, delay)
 
 });
