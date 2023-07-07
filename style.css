@@ -10,7 +10,7 @@
 /* DECORS DU JEU TAPE TAUPE */
 
 body {
-    background-image: url("/Images/paysage.jpg");
+    background-image: url("./Images/paysage.jpg");
 }
 
 /* SCORE */
