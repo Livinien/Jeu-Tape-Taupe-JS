@@ -252,7 +252,7 @@ $("#recommencer").click(function(){
 
 
   // SUPPRIMER LE PSEUDO ET LE NOMBRE DE POINTS DANS LE LOCALSTORAGE POUR REDÉMARRER UNE NOUVELLE PARTIE
-  localStorage.clear();
+  localStorage.removeItem('points');
 
 
   // REMETTRE LE SCORE À 0 LORSQU'ON CLIQUE SUR LE BOUTON "RECOMMENCER"
